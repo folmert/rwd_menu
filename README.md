@@ -16,7 +16,7 @@ Add to your project 2 files:
 <script src="rwd_menu/js/rwd_menu.js"></script>
 ```
 
-**rwd_menu** works for `.rwd_menu` which contains `ul` list.<br>
+**rwd_menu** works for screens under 992px and within `.rwd_menu` element which contains `ul` list.<br>
 Submenu container must be a `li` element with class `.parent`.
 
 ```html

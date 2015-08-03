@@ -1,21 +1,25 @@
 'use strict';
-querySelectorAll = document.querySelectorAll.bind(document);
-	
 
-var rwd_menu = querySelectorAll('.rwd_menu')[0];
+var rwd_menu = (function () {
 
-rwd_menu.addEventListener('click', function(e) {
-	if( e.target === this ) {
-		this.classList.toggle('js-menu_opened');
-	}
-},false);
+	var querySelectorAll = document.querySelectorAll.bind(document);
 
-var submenu = querySelectorAll('.rwd_menu li.parent');
+	var rwd_menu = querySelectorAll('.rwd_menu')[0];
 
-for (var i = 0; i < submenu.length; ++i) {
-	submenu[i].addEventListener('click', function(e) {
+	rwd_menu.addEventListener('click', function(e) {
 		if( e.target === this ) {
-			this.classList.toggle('js-submenu_opened');
+			this.classList.toggle('js-menu_opened');
 		}
-	},false);	
-}
+	},false);
+
+	var submenu = querySelectorAll('.rwd_menu li.parent');
+
+	for (var i = 0; i < submenu.length; ++i) {
+		submenu[i].addEventListener('click', function(e) {
+			if( e.target === this ) {
+				this.classList.toggle('js-submenu_opened');
+			}
+		},false);	
+	}
+
+})();

@@ -23,3 +23,6 @@ var rwd_menu = (function () {
 	}
 
 })();
+
+// TODO: optional config for choosing custom element's class
+// TODO: tidy up css
